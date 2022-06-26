@@ -1,0 +1,23 @@
+.bicicleta {
+  height: 600px;
+  background-color: black;
+  background-image: url("/img/bicicleta.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+}
+
+.bicicleta h1 {
+  margin: auto;
+  background: white;
+  padding: 1rem 2rem;
+}
+
+.pattern {
+  height: 300px;
+  background-color: lightgreen;
+  background-image: url("/img/pattern.svg");
+  background-repeat: repeat;
+  /* background-size: 100px; */
+}

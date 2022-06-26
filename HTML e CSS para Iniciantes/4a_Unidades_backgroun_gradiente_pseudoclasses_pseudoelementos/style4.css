@@ -1,0 +1,45 @@
+h1::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #caf;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: red;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+li::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(#caf, #fff);
+    border: 2px solid #caf;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+p::first-line {
+    font-weight: bold;
+}
+
+p::first-letter {
+    font-size: 2rem;
+    color: blue;
+}

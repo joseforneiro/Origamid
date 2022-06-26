@@ -1,0 +1,15 @@
+.linear {
+  height: 200px;
+  background-image: linear-gradient(
+    to right,
+    lightblue 0%,
+    lightcoral 20%,
+    blue 40%,
+    green 60%
+  );
+}
+
+.radial {
+  height: 200px;
+  background-image: radial-gradient(circle, blue, red, green);
+}

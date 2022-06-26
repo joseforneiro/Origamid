@@ -1,0 +1,45 @@
+a {
+  text-decoration: none;
+  color: white;
+  background: darkblue;
+  display: inline-block;
+}
+
+p {
+  background: lightblue;
+}
+
+.px {
+  font-size: 32px;
+  padding: 16px 31px;
+}
+
+html {
+  /* valor padrão no html: */
+  font-size: 16px;
+}
+
+.rem {
+  /* O tamanho do rem é em relação ao html que o padrão é 16px */
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
+
+.em {
+  /* O tamanho do em é em relação a qualquer elemento pai que modificar o texto. O em não é mais usado */
+  font-size: 2em;
+}
+
+.tipografia {
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.3;
+  text-decoration: none;
+  text-transform: capitalize;
+  text-indent: 5rem;
+  text-align: center;
+  text-shadow: 5px 5px 1px gray;
+  letter-spacing: 0.05rem;
+}
