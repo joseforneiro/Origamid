@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <form action="/" method="">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nomes" required>
+
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" name="cpfs" placeholder="000.000.000-00" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senhas" disabled>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="emails" required>
+
+        <label for="idade">Idade</label>
+        <input type="number" id="idade" name="idades">
+
+        <label for="saida">Saída do Hotel</label>
+        <input type="date" id="saida" name="saidas">
+
+        <div class="checkbox">
+            <input type="checkbox" id="termos" name="termos" value="aceito">
+            <label for="termos">Aceito os termos e condições da empresa.</label>
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" id="anuncio" name="anuncio">
+            <label for="anuncio">Desejo receber anúncios.</label>
+        </div>
+
+        <p>Entrega</p>
+        <div class="radio">
+            <input type="radio" id="retirada" name="retirada">
+            <label for="retirada">Retirar no local.</label>
+        </div>
+        <div class="radio">
+            <input type="radio" id="entrega" name="retirada">
+            <label for="entrega">Entrega em casa.</label>
+        </div>
+
+        <p>Futuro</p>
+        <div class="radio">
+            <input type="radio" id="retirada1" name="futuro">
+            <label for="retirada1">Retirar no local.</label>
+        </div>
+        <div class="radio">
+            <input type="radio" id="entrega1" name="futuro">
+            <label for="entrega1">Entrega em casa.</label>
+        </div>
+
+        <label for="parcelas">Parcelas</label>
+        <select name="parcelas" id="parcelas">
+            <option value="1x">1x de R$200,00</option>
+            <option value="2x">2x de R$100,00</option>
+            <option value="4x">4x de R$50,00</option>
+        </select>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" id="mensagem" rows="5"></textarea>
+
+        <button>Enviar</button>
+    </form>
+</body>
+
+</html>
