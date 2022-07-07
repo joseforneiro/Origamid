@@ -59,3 +59,56 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
+
+[required] {
+  border: 2px solid tomato;
+}
+
+/* Aqui o a tem que estar grudado no [href] pois o [href] não está dentro de a e sim o [href] faz parte do a */
+a[href="#contato"] {
+  border: 2px solid green;
+}
+
+/* ^= Quer dizer inicia com (href^="#" => links que iniciam com # */
+[href^="#"] {
+  background: tomato;
+}
+
+/* $= Quer dizer termina com (href$=".com" => links que terminam com .com */
+[href$=".com"] {
+  background: gold;
+}
+
+/* section > h2 Quer dizer que é só para o h2 que é filho direto do section */
+section > h2 {
+  color: tomato;
+}
+
+p {
+  margin: 0px;
+}
+
+article {
+  background: lightgreen;
+  padding: 10px;
+}
+
+/* Esse é um jeito de tirar a magin-top só so último p: */
+/* p {
+  margin-bottom: 20px;
+}
+
+article p:last-child {
+  margin-bottom: 0px;
+} */
+
+/* p + p quer dizer que só vai ser selecionado o p que vier após outro p */
+p + p {
+  margin-top: 20px;
+}
+
+/* O * vai selecionar todos os elementos da tela */
+* {
+  /* border: 1px solid red; */
+  color: blue;
+}
