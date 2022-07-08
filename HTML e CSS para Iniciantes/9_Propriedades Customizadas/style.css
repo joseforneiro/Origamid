@@ -1,0 +1,29 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo: #222;
+    --text0-1: #eee;
+    --texto-2: #bbb;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --fundo: #fff;
+    --text0-1: #111;
+    --texto-2: #444;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  background: var(--fundo);
+}
+
+h1 {
+  color: var(--text0-1);
+}
+
+p {
+  color: var(--texto-2);
+}
