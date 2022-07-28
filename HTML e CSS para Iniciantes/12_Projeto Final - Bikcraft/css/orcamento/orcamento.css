@@ -1,0 +1,187 @@
+#orcamento {
+  background: linear-gradient(var(--cor-11) 600px, var(--cor-1) 0px);
+}
+
+.orcamento {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  padding-bottom: 120px;
+}
+
+.orcamento h2 {
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.orcamento h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 8px;
+  background-color: var(--cor-p1);
+  position: absolute;
+  left: -12px;
+}
+
+.orcamento-produto,
+.orcamento-dados {
+  padding: 60px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.orcamento-produto {
+  border-radius: 4px 0 0 4px;
+  background: var(--cor-12) url("../../img/dec/bottom-left.svg") no-repeat;
+  background-position: bottom 20px left 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-content: start;
+}
+
+/* Falar com todo elemento dentro de .orcamento-produto: (.orcamento-produto > *) */
+.orcamento-produto > * {
+  grid-column: 1/-1;
+}
+
+.orcamento-produto > label {
+  grid-column: initial;
+}
+
+.orcamento-produto label {
+  font: 400 1rem/1.5 "Poppins", sans-serif;
+  color: var(--cor-4);
+  background-color: var(--cor-10);
+  padding: 12px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  border: 1px solid var(--cor-10);
+}
+
+/* Aqui, na classe orcamento-produto quando o input estiver checado eu quero falar com a label logo após ele (logo após o input): */
+.orcamento-produto input:checked + label {
+  background: var(--cor-0);
+  color: var(--cor-11);
+}
+
+.orcamento-produto label::before {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--cor-6);
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.orcamento-produto input:checked + label::before {
+  border-color: var(--cor-7);
+  box-shadow: inset 0 0 0 3px var(--cor-0), inset 0 0 0 6px var(--cor-7);
+}
+
+.orcamento-produto label:hover {
+  background-color: var(--cor-9);
+  border-color: var(--cor-9);
+}
+
+.orcamento-produto input:focus + label {
+  box-shadow: 0 0 0 2px var(--cor-p1);
+  border-color: var(--cor-12);
+}
+
+.orcamento-produto label span {
+  display: none;
+}
+
+.orcamento-produto input:checked + label span {
+  display: inline-block;
+}
+
+/* pointer-events: none; -> Tira qualquer evento de click que o radio bottom possua como padrão */
+.orcamento-produto input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.orcamento-dados {
+  border-radius: 0 4px 4px 0;
+  background: var(--cor-0) url("../../img/dec/bottom-right.svg") no-repeat;
+  background-position: bottom 20px right 20px;
+}
+
+/* inicialmente o conteúdo da classe orcamento-conteudo fica oculto. */
+.orcamento-conteudo {
+  display: none;
+}
+
+/* .orcamento-dados h2:nth-last-of-type(n + 2) -> adiciona margen a partir do segundo h2. */
+.orcamento-conteudo h2,
+.orcamento-dados h2:nth-last-of-type(n + 2) {
+  margin-top: 20px;
+}
+
+/* #bikcraft:checked ~ #orcamento-bikcraft --> Quando o id bikcraft estiver checado, irá pegar o primeiro id orcamento-bikcraft após ele, ou seja:
+O ~ irá tentar procurar o primeiro elemento após o id bikcraft (#bikcraft) que tenha o id de orçamento-bikcraft (#orcamento-bikcraft).
+Mas para fazer isso (para funcionar) tem que estar no mesmo nível do elemento pai. */
+#bikcraft:checked ~ #orcamento-bikcraft,
+#seguro:checked ~ #orcamento-seguro {
+  display: grid;
+  gap: 20px;
+}
+
+.orcamento-detalhes {
+  display: none;
+  background: var(--cor-0);
+  padding: 20px;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.orcamento-detalhes li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.orcamento-detalhes li img {
+  width: 16px;
+  margin-right: 8px;
+}
+
+.orcamento-produto input:checked + label + .orcamento-detalhes {
+  display: grid;
+}
+
+@media (max-width: 1200px) {
+  .orcamento-produto,
+  .orcamento-dados {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 800px) {
+  .orcamento {
+    grid-template-columns: 1fr;
+  }
+  .orcamento-produto {
+    border-radius: 4px 4px 0 0;
+    background: var(--cor-12);
+  }
+  .orcamento-dados {
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+@media (max-width: 400px) {
+  .orcamento-produto {
+    grid-template-columns: 1fr;
+  }
+}
