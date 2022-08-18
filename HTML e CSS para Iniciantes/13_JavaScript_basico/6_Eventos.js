@@ -60,13 +60,13 @@ function mostrar() {
 botao.addEventListener("click", mostrar);
 
 // ******************************************************************
-
+// window é um objeto que representa a janela do browser e ele contem todo o dom do site. Tem todas as informações nele
 console.log(window);
 
-// Retorna a altura da janela
+// Retorna a altura interna da janela
 console.log(window.innerHeight);
 
-// Retorna a largura da janela
+// Retorna a largura interna da janela
 console.log(window.innerWidth);
 
 const larguraTela = window.innerWidth;
@@ -80,4 +80,14 @@ function coordenadaMouse(event) {
   console.log(coordenadas);
 }
 
-window.addEventListener("mousemove", coordenadaMouse);
+// Para funcionar a função, descomenta a linha abaixo
+// window.addEventListener("mousemove", coordenadaMouse);
+
+// ******************************************************************
+
+// Retorna a distancia da barra de scrool até o topo.
+function scroll() {
+  console.log(window.scrollY);
+}
+
+window.addEventListener("scroll", scroll);

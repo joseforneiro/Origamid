@@ -5,3 +5,7 @@
 .texto.ativar {
   display: block;
 }
+
+body {
+  height: 2000px;
+}
