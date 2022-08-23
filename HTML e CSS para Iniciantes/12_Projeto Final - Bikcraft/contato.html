@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato | Bikcraft</title>
     <meta name="description" content="Contato.">
+
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
     <!-- Como o css é crítico, acrescentamos a linha abaixo para pré-carregar o css antes de qualquer coisa: -->
-    <link rel="preload" href="./css/style.css" as="style">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preload" href="./css/style.min.css" as="style">
+    <link rel="stylesheet" href="./css/style.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +25,7 @@
 <body id="contato">
     <header class="header-bg">
         <div class="header container">
-            <a href="./">
+            <a href="./Index.html">
                 <img src="./img/bikcraft.svg" alt="Bikcraft">
             </a>
             <nav aria-label="primaria">
@@ -70,7 +72,7 @@
                 </div>
             </section>
             <section class="contato-formulario" aria-label="Formulário">
-                <form class="form" action="./contato.html">
+                <form class="form" action="./enviar.php" method="post">
                     <div>
                         <label for="nome">Nome</label>
                         <input type="text" id="nome" name="nome" placeholder="Seu nome">
@@ -81,7 +83,7 @@
                     </div>
                     <div class="col-2">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="contato@email.com">
+                        <input type="email" id="email" name="email" placeholder="contato@email.com" required>
                     </div>
                     <div class="col-2">
                         <label for="mensagem">Mensagem</label>
@@ -169,6 +171,7 @@
         </div>
     </footer>
     <script src="./js/script.js"></script>
+    <script src="./js/formulario.js"></script>
 </body>
 
 </html>
