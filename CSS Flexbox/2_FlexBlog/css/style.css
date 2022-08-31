@@ -57,6 +57,7 @@ img {
 }
 
 /* Menu */
+
 .menu-bg {
   background: #2c70ff;
 }
@@ -94,4 +95,234 @@ img {
 
 .menu-nav a:hover {
   color: #122ab2;
+}
+
+/* Introdução */
+
+.introducao {
+  font-size: 3em;
+  line-height: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 10px;
+}
+
+/* Sobre */
+
+.sobre {
+  border-top: 2px solid #2c70ff;
+  border-bottom: 2px solid #2c70ff;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* flex: 2 1 300px; => 2: dobro de proporção que o 1. 1: o texto quebra mesmo com menos de 300 px. Se fosse 0 o texto se mantinha 
+com um mínimo de 300px*/
+.sobre-info {
+  flex: 2 1 300px;
+  margin: 0 10px;
+}
+
+.sobre-info h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.sobre-info p {
+  font-size: 1.25em;
+  line-height: 1.4;
+  margin-bottom: 1em;
+  color: #7c7c7c;
+}
+
+/* flex: 1 1 160px; => Com 160px a imagem para de diminuir e quebra */
+.sobre-img {
+  flex: 1 0 160px;
+  margin: 0 10px;
+}
+
+/* Produtos */
+
+.produtos {
+  max-width: 960px;
+  margin: 60px auto;
+}
+
+.produtos h1 {
+  font-size: 3em;
+  margin: 0 10px 60px 10px;
+}
+
+.produtos-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.produtos-item {
+  flex: 1 1 175px;
+  margin: 10px;
+}
+
+.produtos-item h2 {
+  font-size: 3em;
+  color: #a4a4a4;
+  background: #f7f7f7;
+  padding: 60px 20px;
+}
+
+.purple {
+  border-top: 8px solid #ae81ff;
+}
+
+.pink {
+  border-top: 8px solid #f9265e;
+}
+
+.blue {
+  border-top: 8px solid #66d9eb;
+}
+
+/* Preço */
+
+.preco {
+  background: #f7f7f7;
+  padding: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+/* Ao invés de align-items: flex-end; na classe .preco também poderia ter feito align-self: flex-end; na classe .preco-item.
+Dava na mesma. */
+
+/* Aqui podemos usar min-width: 260px; ou ao invés de usar flex: 1; utilizamos flex: 1 1 260px; */
+.preco-item {
+  flex: 1;
+  border: 4px solid white;
+  padding: 20px;
+  margin: 10px;
+  min-width: 260px;
+}
+
+.preco-item h2 {
+  font-size: 3em;
+  color: #a4a4a4;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.preco-item span {
+  display: block;
+  max-width: 300px;
+  margin: 20px auto;
+  font-size: 3em;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0 5px 0;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+}
+
+.preco-item sup {
+  font-size: 1.5rem;
+}
+
+.preco-item ul {
+  max-width: 300px;
+  margin: 20px auto;
+  font-size: 1.25em;
+  font-style: italic;
+  color: #7c7c7c;
+}
+
+.preco-item li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.preco-item li::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #2c70ff;
+  border-radius: 50%;
+}
+
+.preco-item a {
+  display: block;
+  max-width: 300px;
+  margin: 20px auto;
+  border: 4px solid;
+  color: #222222;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.25em;
+  padding: 15px 0;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .preco {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .preco .preco-item:nth-child(3) {
+    order: -2;
+  }
+  .preco .preco-item:nth-child(2) {
+    order: -1;
+  }
+}
+
+.qualidade {
+  max-width: 960px;
+  margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.qualidade-item {
+  flex: 1 1 300px;
+  margin: 20px 10px;
+}
+
+.qualidade-item h2 {
+  font-size: 2.25em;
+  color: #a4a4a4;
+  margin-bottom: 20px;
+}
+
+.qualidade-item h2::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 30px;
+  margin-right: 10px;
+  /* background: blue; */
+}
+
+/* nth-of-type(3n+1) h2::before -> +1 => O item um é selecionado. 3n => depois do item um eu quero sempre o terceiro item a partir do um. */
+.qualidade-item:nth-of-type(3n + 1) h2::before {
+  background: #ae81ff;
+}
+/* nth-of-type(3n+2) h2::before -> +2 => O item dois é selecionado. 3n => depois do item dois eu quero sempre o terceiro item a partir do dois. */
+.qualidade-item:nth-of-type(3n + 2) h2::before {
+  background: #f9265e;
+}
+/* nth-of-type(3n+3) h2::before -> +2 => O item três é selecionado. 3n => depois do item três eu quero sempre o terceiro item a partir do três. */
+.qualidade-item:nth-of-type(3n + 3) h2::before {
+  background: #66d9eb;
+}
+
+.qualidade-item p {
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #7c7c7c;
 }
