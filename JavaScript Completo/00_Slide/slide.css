@@ -1,0 +1,9 @@
+.botao {
+  display: block;
+  max-width: max-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: blue;
+  color: #fff;
+}
