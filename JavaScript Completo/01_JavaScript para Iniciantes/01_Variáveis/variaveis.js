@@ -29,6 +29,9 @@ console.log(semDefinir);
 ** Se tiver mais de uma palavra, a primeira começa com letra minúscula e a segunda
  começa com letra maiúscula (Ex.: possuiFaculdadeNoExterior)
 ** É possível mudar os valores atribuídos a variáveis declaradas com var e let. Porém não é possível modificar valores das declaradas com const.
+
+Obs.: ** A variável var não é mais utilizada, pois ela vaza escopo, ou seja toda a aplicação pode enxergá-la.
+      ** Isso pode causar uma falha de segurança.
 */
 
 // --------------------------------------------------
