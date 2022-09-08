@@ -1,4 +1,5 @@
 // Tipos de dados. Todos são primitivos exceto os objetos.
+
 var nome = "André"; // String
 var idade = 28; // Number
 var possuiFaculdade = true; // Boolean
@@ -9,11 +10,13 @@ var novoObjeto = {}; // Object
 // Primitivos são dados imutáveis.
 
 // --------------------------------------------------
+
 var nome1 = "Junior";
 console.log(typeof nome1);
 // typeof retorna o tipo de dado da variavel nome1. no caso string
 
 // --------------------------------------------------
+
 // Você pode somar uma string e assim concatenar as palavras.
 var nome2 = "André";
 var sobrenome = "Rafael";
