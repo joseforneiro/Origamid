@@ -24,6 +24,7 @@ var nomeCompleto = nome2 + " " + sobrenome;
 console.log(nomeCompleto);
 
 // --------------------------------------------------
+
 // Você pode somar números com strings, o resultado final é sempre uma string.
 
 var gols = 1000;
