@@ -37,8 +37,35 @@ titulo.classList; // retorna as classes;
 titulo.id; // retorna o id;
 titulo.offsetHeight; // retorna a altura do elemento;
 
+console.log(titulo.innerText);
+console.log(titulo.classList);
+
+// Utilizando a função externamente:
+
+function callback() {
+  console.log("clicou em ", titulo.classList);
+}
+
 titulo.addEventListener("click", callback);
+
 // ativa a função callback ao click no titulo
+
+// ou
+
+// Utilizando a função internamente. Função oculta:
+
+titulo.addEventListener("click", function () {
+  console.log("clicou em ", titulo.innerText);
+});
+
+// --------------------------------------------------
+
+const href = window.location.href;
+console.log(href);
+
+if (href === "http://127.0.0.1:5500/01_O%20que%20e%20DOM/dom.html") {
+  console.log("É igual");
+}
 
 // --------------------------------------------------
 
@@ -46,9 +73,17 @@ titulo.addEventListener("click", callback);
 
 // Retorne o url da página atual utilizando o objeto window
 
+const hrefPagina = window.location.href;
+console.log(hrefPagina);
+
 // Seleciona o primeiro elemento da página que
 // possua a classe ativo
+const elementoAtivo = document.querySelector(".ativo");
 
 // Retorne a linguagem do navegador
+const linguagem = window.navigator.language;
+console.log(linguagem);
 
 // Retorne a largura da janela
+const largura = window.innerWidth;
+console.log(largura);
