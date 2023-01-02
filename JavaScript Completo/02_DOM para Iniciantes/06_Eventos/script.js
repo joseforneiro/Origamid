@@ -201,7 +201,7 @@ todosElementos.forEach((elemento) => {
 // remova o elemento que está sendo clicado, o método remove() remove um elemento
 
 function handleElemento(event) {
-  // event.currentTarget.remove();
+  // event.currentTarget.remove(); // Essa linha está comentada para não remover os itens da tela. Mas para o exercício funcionar deixar a linha descomentada.
 }
 
 todosElementos.forEach((elemento) => {
